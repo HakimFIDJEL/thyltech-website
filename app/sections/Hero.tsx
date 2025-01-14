@@ -33,7 +33,7 @@ export default function Hero() {
         </svg>
       </div>
 
-      <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 z-1">
         <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl">
             Recherche de Projet de Fin d’Études
@@ -60,7 +60,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="w-full mb-24">
+      <div className="w-full mb-24 relative z-1">
         <div className="relative flex items-center justify-center py-8">
 
 
@@ -79,13 +79,13 @@ export default function Hero() {
         </div>
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex justify-center space-x-16 pb-8">
-            <div className="flex items-center flex-col">
+            <div className="flex items-center flex-col gap-y-2">
                 <Image
-                    src="/placeholder.svg?height=80&width=240"
+                    src="/images/ig2i.png"
                     alt="School Logo"
-                    width={240}
-                    height={80}
-                    className="h-20 w-auto"
+                    width={300}
+                    height={100}
+                    className="h-24 w-auto"
                 />
                 <p className="text-muted-foreground text-sm">
                     Centrale Lille - IG2I
@@ -93,18 +93,31 @@ export default function Hero() {
 
             </div>
             <Separator orientation="vertical" className="h-20" />
-            <div className="flex items-center flex-col">
+            <div className="flex items-center flex-col gap-y-2">
                 <Image
-                src="/placeholder.svg?height=80&width=240"
+                src="/images/cti.png"
                 alt="CTI Logo"
-                width={240}
-                height={80}
-                className="h-20 w-auto"
+                width={300}
+                height={100}
+                className="h-24 w-auto"
                 />
                 <p className="text-muted-foreground text-sm">
                     Commission des Titres d'Ingénieur
                 </p>
             </div>
+            <Separator orientation="vertical" className="h-20" />
+            <div className="flex items-center flex-col gap-y-2">
+                <Image
+                src=""
+                alt="Notre logo"
+                width={300}
+                height={100}
+                className="h-24 w-auto"
+                />
+                <p className="text-muted-foreground text-sm">
+                    Notre logo
+                </p>
+              </div>
           </div>
         </div>
         <div className="border-b bg-border w-full" />
