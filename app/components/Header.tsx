@@ -7,7 +7,8 @@ import {
     Moon, 
     Sun, 
     Menu, 
-    Github 
+    Github,
+    Mail,
 } from 'lucide-react'
 
 import { Button } from "@/components/ui/button"
@@ -115,6 +116,7 @@ const Header = () => {
             <Button asChild>
               <Link href="#contact">
                 Nous contacter
+                <Mail className="h-5 w-5 ml-2" />
               </Link>
             </Button>
             <div className="flex md:hidden ml-4">
