@@ -3,10 +3,10 @@ import { ArrowRight, Mail } from "lucide-react";
 import Image from "next/image";
 import { Separator } from "@/components/ui/separator";
 
-export default function Hero() {
+export function Hero() {
   return (
     // Left
-    <section className="relative overflow-hidden bg-background min-h-screen flex items-center justify-end flex-col gap-y-32">
+    <section className="relative overflow-hidden bg-background  flex items-center justify-end flex-col">
       {/* Background pattern */}
       <div className="absolute inset-0 z-0">
         <svg
@@ -33,7 +33,7 @@ export default function Hero() {
         </svg>
       </div>
 
-      <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 z-1">
+      <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 z-1 py-40 border-l border-r border-border">
         <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl">
             Recherche de Projet de Fin d’Études
@@ -60,25 +60,9 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="w-full mb-24 relative z-1">
-        <div className="relative flex items-center justify-center py-8">
-
-
-          <div className="absolute inset-0 flex items-center">
-            <div className="w-full border-t bg-border" />
-          </div>
-
-
-          <div className="relative bg-background px-4">
-            <span className="">
-              Nos références
-            </span>
-          </div>
-
-
-        </div>
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-center space-x-16 pb-8">
+      <div className="w-full  relative z-1 border-b border-t border-border ">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 container border-l border-r border-border py-8">
+          <div className="flex justify-center space-x-16">
             <div className="flex items-center flex-col gap-y-2">
                 <Image
                     src="/images/ig2i.png"
@@ -92,7 +76,7 @@ export default function Hero() {
                 </p>
 
             </div>
-            <Separator orientation="vertical" className="h-20" />
+            <Separator orientation="vertical" className="h-100" />
             <div className="flex items-center flex-col gap-y-2">
                 <Image
                 src="/images/cti.png"
@@ -105,7 +89,7 @@ export default function Hero() {
                     Commission des Titres d'Ingénieur
                 </p>
             </div>
-            <Separator orientation="vertical" className="h-20" />
+            <Separator orientation="vertical" className="h-100" />
             <div className="flex items-center flex-col gap-y-2">
                 <Image
                 src=""
@@ -120,7 +104,6 @@ export default function Hero() {
               </div>
           </div>
         </div>
-        <div className="border-b bg-border w-full" />
       </div>
     </section>
   );
