@@ -61,7 +61,7 @@ export function Hero() {
       </div>
 
       <div className="w-full  relative z-1 border-b border-t border-border ">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 container border-l border-r border-border py-8">
+        <div className="mx-auto px-4 sm:px-6 lg:px-8 container border-l border-r border-border py-8">
           <div className="flex justify-center space-x-16">
             <div className="flex items-center flex-col gap-y-2">
                 <Image

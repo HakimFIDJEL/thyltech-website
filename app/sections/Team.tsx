@@ -13,15 +13,15 @@ const teamMembers = [
 
 export function Team() {
   return (
-    <section className="relative overflow-hidden bg-background min-h-screen flex items-center justify-end flex-col">
-      <div className="container px-4 md:px-6 border-l border-r border-border  py-16">
+    <section className="relative overflow-hidden bg-background  flex items-center justify-end flex-col">
+      <div className="container px-4 md:px-6 border-l border-r border-border  pt-8 pb-16">
         <SectionTitle 
           title="L'Équipe" 
           subtitle="Découvrez les talents qui font notre force"
-          className="mb-12" 
+          className="mb-4" 
         />
         
-        <div className="space-y-4">
+        <div className="space-y-0">
           {teamMembers.map((member, index) => (
             <div key={member.name}>
               <TeamMember {...member} />

@@ -9,8 +9,8 @@ import {
 
 export function Project() {
   return (
-    <section className="relative overflow-hidden bg-background min-h-screen flex items-center justify-end flex-col">
-      <div className="container px-4 md:px-6 border-l border-r border-border  py-16">
+    <section className="relative overflow-hidden bg-background flex items-center justify-end flex-col">
+      <div className="container px-4 md:px-6 border-l border-r border-border  pt-8 pb-16">
         <SectionTitle
           title="Le Projet"
           className="mb-12"
