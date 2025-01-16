@@ -4,6 +4,8 @@ import { Hero } from "./sections/Hero";
 import { Project } from "./sections/Project";
 import { FullSeparator } from "./components/FullSeparator";
 import { Team } from "./sections/Team";
+import { School } from "./sections/School";
+import { Contact } from "./sections/Contact";
 
 export default function Home() {
   return (
@@ -15,7 +17,12 @@ export default function Home() {
       <FullSeparator />
       <Team />
       <FullSeparator />
-
+      <School />
+      <FullSeparator />
+      Section Planning
+      <FullSeparator />
+      <Contact />
+      <FullSeparator />
 
 
 
