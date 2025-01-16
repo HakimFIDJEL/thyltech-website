@@ -44,7 +44,7 @@ Pour générer la version optimisée pour la production, exécute la commande su
 
 Cela construira l'application dans le dossier `.next` et optimisera les performances.
 
-### Lancer le serveur en production
+## Lancer le serveur en production
 
 Une fois le build effectué, tu peux démarrer le serveur de production avec la commande suivante :
 
