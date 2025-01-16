@@ -109,8 +109,8 @@ export function School() {
                     </CarouselItem>
                   ))}
                 </CarouselContent>
-                <CarouselPrevious variant="default" />
-                <CarouselNext variant="default" />
+                <CarouselPrevious variant="default" className='hidden md:flex' />
+                <CarouselNext variant="default"  className='hidden md:flex' />
               </Carousel>
             </CardContent>
           </Card>

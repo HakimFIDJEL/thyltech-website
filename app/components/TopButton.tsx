@@ -35,7 +35,7 @@ export function TopButton() {
 
   return (
     <div
-      className={`transition-all duration-500 transform fixed bottom-8 right-12 ${
+      className={`transition-all duration-500 transform fixed bottom-8 right-4 sm:right-12 ${
         showButton ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
       }`}
       onClick={handleClick}

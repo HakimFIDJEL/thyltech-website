@@ -25,7 +25,7 @@ export function ContactItem({ name, href, icon }: ContactItemProps) {
         </div>
       </div>
 
-      <Button size="icon" asChild>
+      <Button size="icon">
         {icon}
       </Button>
     </a>

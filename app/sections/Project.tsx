@@ -156,7 +156,7 @@ export function Project() {
         </FadeInComponent>
 
         <FadeInComponent delay={200}>
-          <BentoGrid className="lg:grid-rows-3 lg:grid-cols-2 lg:gap-4">
+          <BentoGrid className="lg:grid-rows-3 lg:grid-cols-2 lg:gap-4 grid-rows-4 grid-cols-1">
             {features.map((feature) => (
               <BentoCard key={feature.name} {...feature}/>
             ))}

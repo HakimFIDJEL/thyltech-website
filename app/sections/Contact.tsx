@@ -66,7 +66,8 @@ export function Contact() {
             </form>
           </FadeInComponent>
 
-          <Separator orientation="vertical" className="h-100" />
+          <Separator orientation="vertical" className="h-100 hidden md:block" />
+          <Separator orientation="horizontal" className="w-full block md:hidden" />
 
           <FadeInComponent className="w-full md:w-1/2 space-y-6">
             <p className="text-medium font-semibold text-center">

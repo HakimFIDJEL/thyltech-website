@@ -1,30 +1,23 @@
-'use client'
+"use client";
 
-import { useState, useEffect } from 'react'
-import Link from 'next/link'
-import { useTheme } from 'next-themes'
-import { 
-    Moon, 
-    Sun, 
-    Menu, 
-    Github,
-    Mail,
-} from 'lucide-react'
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import { useTheme } from "next-themes";
+import { Moon, Sun, Menu, Github, Mail } from "lucide-react";
 
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button";
 import {
-    Tooltip,
-    TooltipContent,
-    TooltipProvider,
-    TooltipTrigger,
-} from "@/components/ui/tooltip"
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
+export function Header() {
+  const [mounted, setMounted] = useState(false);
+  const { theme, setTheme } = useTheme();
 
-export function Header ()  {
-  const [mounted, setMounted] = useState(false)
-  const { theme, setTheme } = useTheme()
-
-  useEffect(() => setMounted(true), [])
+  useEffect(() => setMounted(true), []);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b  border-border">
@@ -33,22 +26,47 @@ export function Header ()  {
           <div className="flex items-center">
             {/* Logo */}
             <Link href="#top" className="flex items-center">
-              <svg className="h-8 w-auto text-primary" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M2 17L12 22L22 17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M2 12L12 17L22 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              <svg
+                className="h-8 w-auto text-primary"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L2 7L12 12L22 7L12 2Z"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="M2 17L12 22L22 17"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="M2 12L12 17L22 12"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
               </svg>
-              <span className="ml-2 text-xl font-bold text-foreground">PFE - Projet</span>
+              <span className="ml-2 text-xl font-bold text-foreground">
+                PFE - Projet
+              </span>
             </Link>
 
             {/* Separator */}
-            <div className="h-6 w-px bg-border mx-4" />
+            <div className="h-6 w-px bg-border mx-4  hidden md:block" />
 
             {/* Navigation Links */}
             <nav className="hidden md:flex space-x-2">
-              {['Projet', 'Équipe', 'École', 'Planning'].map((item) => (
-                <Link 
-                  key={item} 
+              {["Projet", "Équipe", "École", "Planning"].map((item) => (
+                <Link
+                  key={item}
                   href={`#${item.toLowerCase()}`}
                   className="text-muted-foreground hover:text-foreground px-2 py-2 rounded-md text-sm font-medium transition duration-150 ease-in-out"
                 >
@@ -60,76 +78,69 @@ export function Header ()  {
 
           {/* Theme Toggle, GitHub, and Contact Button */}
           <div className="flex items-center">
-
             <TooltipProvider>
-                <Tooltip>
-                    <TooltipTrigger asChild>
-                        <Button
-                        variant="ghost"
-                        size="icon"
-                        onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-                        className="text-foreground"
-                        >
-                        {mounted && (theme === 'dark' ? (
-                            <Sun className="h-5 w-5" />
-                        ) : (
-                            <Moon className="h-5 w-5" />
-                        ))}
-                            <span className="sr-only">Changer le thème</span>
-                        </Button>
-                    </TooltipTrigger>
-                    <TooltipContent>
-                        <p>
-                            Changer le thème
-                        </p>
-                    </TooltipContent>
-                </Tooltip>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    onClick={() =>
+                      setTheme(theme === "dark" ? "light" : "dark")
+                    }
+                    className="text-foreground hidden sm:flex items-center"
+                  >
+                    {mounted &&
+                      (theme === "dark" ? (
+                        <Sun className="h-5 w-5" />
+                      ) : (
+                        <Moon className="h-5 w-5" />
+                      ))}
+                    <span className="sr-only">Changer le thème</span>
+                  </Button>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>Changer le thème</p>
+                </TooltipContent>
+              </Tooltip>
             </TooltipProvider>
 
             <TooltipProvider>
-                <Tooltip>
-                    <TooltipTrigger asChild>
-                        <Button
-                            variant="ghost"
-                            size="icon"
-                            asChild
-                            className="text-foreground"
-                        >
-                        <Link href="https://github.com" target="_blank" rel="noopener noreferrer">
-                            <Github className="h-5 w-5" />
-                            <span className="sr-only">GitHub</span>
-                        </Link>
-                        </Button>
-                    </TooltipTrigger>
-                    <TooltipContent>
-                        <p>
-                            Code source
-                        </p>
-                    </TooltipContent>
-                </Tooltip>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    asChild
+                    className="text-foreground  hidden sm:flex items-center"
+                  >
+                    <Link
+                      href="https://github.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Github className="h-5 w-5" />
+                      <span className="sr-only">GitHub</span>
+                    </Link>
+                  </Button>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>Code source</p>
+                </TooltipContent>
+              </Tooltip>
             </TooltipProvider>
 
-
-
-
-            <div className="h-6 w-px bg-border mx-4" />
+            <div className="h-6 w-px bg-border mx-4  hidden sm:flex" />
             <Button asChild>
-              <Link href="#contact">
-                Nous contacter
-                <Mail className="h-5 w-5 ml-2" />
+              <Link href="#contact" className="flex items-center gap-2">
+                <span className="hidden lg:block">Nous contacter</span>
+                <Mail className="h-5 w-5" />
               </Link>
             </Button>
-            <div className="flex md:hidden ml-4">
-              <Button variant="ghost" size="icon">
-                <Menu className="h-6 w-6" />
-              </Button>
-            </div>
           </div>
         </div>
       </div>
     </header>
-  )
+  );
 }
 
-export default Header
-
+export default Header;

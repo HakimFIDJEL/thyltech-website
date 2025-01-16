@@ -16,17 +16,9 @@ html {
   scroll-behavior: smooth;
 }
 
-/* @media (min-width: 1280px) {
-  .container {
-    max-width: 1100px;
-  }
-} */
-
-/* @media (min-width: 1024px) {
-  .container {
-    max-width: 1024px;
-  }
-} */
+.container {
+  max-width: 1080px !important;
+}
 
 
 @layer base {

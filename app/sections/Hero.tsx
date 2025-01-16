@@ -36,7 +36,7 @@ export function Hero() {
       </div> */}
 
       <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 z-1 py-40 border-l border-r border-border flex justify-between items-center gap-8">
-        <div className="max-w-2xl">
+        <div className="max-w-full sm:max-w-2xl">
           <FadeInComponent>
             <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl">
               Recherche de Projet de Fin d’Études
@@ -50,14 +50,14 @@ export function Hero() {
             </p>
           </FadeInComponent>
           <FadeInComponent delay={400}>
-            <div className="mt-10 flex items-start gap-x-6">
-              <Button size="lg" asChild>
+            <div className="mt-10 flex items-start gap-x-6 flex-col sm:flex-row gap-y-4">
+              <Button size="lg" asChild className="w-full sm:w-auto">
                 <a href="#projet">
                   En savoir plus
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
               </Button>
-              <Button size="lg" variant="outline" asChild>
+              <Button size="lg" variant="outline" asChild className="w-full sm:w-auto ">
                 <a href="#contact">
                   Nous contacter
                   <Mail className="ml-2 h-4 w-4" />
@@ -71,7 +71,7 @@ export function Hero() {
       <div className="w-full  relative z-1 border-b border-t border-border ">
         <div className="mx-auto px-4 sm:px-6 lg:px-8 container border-l border-r border-border py-8">
           <FadeInComponent delay={600}>
-            <div className="flex justify-center space-x-16">
+            <div className="flex justify-center flex-col gap-8 xl:flex-row xl:gap-16">
               <div className="flex items-center flex-col gap-y-2">
                 <Image
                   src="/images/ig2i.png"
@@ -84,7 +84,8 @@ export function Hero() {
                   Centrale Lille - IG2I
                 </p>
               </div>
-              <Separator orientation="vertical" className="h-100" />
+              <Separator orientation="vertical" className="h-100 hidden xl:block" />
+              <Separator orientation="horizontal" className="w-full block xl:hidden" />
               <div className="flex items-center flex-col gap-y-2">
                 <Image
                   src="/images/cti.png"
@@ -97,7 +98,8 @@ export function Hero() {
                   Commission des Titres d'Ingénieur
                 </p>
               </div>
-              <Separator orientation="vertical" className="h-100" />
+              <Separator orientation="vertical" className="h-100 hidden xl:block" />
+              <Separator orientation="horizontal" className="w-full block xl:hidden" />
               <div className="flex items-center flex-col gap-y-2">
                 <Image
                   src=""
