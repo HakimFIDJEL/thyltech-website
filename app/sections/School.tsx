@@ -6,6 +6,9 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
 import { Separator } from '@/components/ui/separator'
 
+import { FadeInComponent } from '../components/FadeInComponent'
+import { FullSeparator } from '../components/FullSeparator'
+
 
 const testimonials = [
   {
@@ -31,34 +34,35 @@ const testimonials = [
 export function School() {
   return (
     <section className="relative overflow-hidden bg-background flex items-center justify-end flex-col" id="école">
-      <div className="container px-4 md:px-6 border-l border-r border-border  py-8 ">
         <SectionTitle 
           title="IG2I Centrale Lille" 
           subtitle="Une formation d'excellence en ingénierie informatique"
-          className="mb-12"
         />
+        <FullSeparator />
+      <div className="container px-4 md:px-6 border-l border-r border-border  py-8 ">
 
         <div className="flex flex-col md:flex-row gap-16 mb-16">
-          <div className="w-full md:w-1/2 space-y-2">
-            <h3 className="text-xl font-semibold">Présentation de l'école</h3>
-            <Separator />
-            <p className="text-muted-foreground pt-3">
-              IG2I Centrale Lille est une école d'ingénieurs spécialisée en informatique et industrie, 
-              offrant une formation de pointe sur 5 ans. Notre programme combine une solide base théorique 
-              avec une approche pratique basée sur des projets concrets, préparant ainsi nos étudiants 
-              aux défis technologiques du futur.
-            </p>
-            <p className="text-muted-foreground pt-2">
-              Située au cœur de la région Hauts-de-France, notre école bénéficie de partenariats 
-              étroits avec des entreprises leaders de l'industrie, offrant à nos étudiants des 
-              opportunités uniques de stages et d'alternance tout au long de leur cursus.
-            </p>
-            <p className="text-muted-foreground pt-2">
-              À IG2I, nous mettons l'accent sur l'innovation, la recherche et le développement personnel, 
-              formant ainsi des ingénieurs polyvalents, créatifs et prêts à relever les défis du monde professionnel.
-            </p>
-          </div>
-          <div className="w-full md:w-1/2">
+          <FadeInComponent className="w-full md:w-1/2 space-y-2">
+              <h3 className="text-xl font-semibold">Présentation de l'école</h3>
+              <Separator />
+              <p className="text-muted-foreground pt-3">
+                IG2I Centrale Lille est une école d'ingénieurs spécialisée en informatique et industrie, 
+                offrant une formation de pointe sur 5 ans. Notre programme combine une solide base théorique 
+                avec une approche pratique basée sur des projets concrets, préparant ainsi nos étudiants 
+                aux défis technologiques du futur.
+              </p>
+              <p className="text-muted-foreground pt-2">
+                Située au cœur de la région Hauts-de-France, notre école bénéficie de partenariats 
+                étroits avec des entreprises leaders de l'industrie, offrant à nos étudiants des 
+                opportunités uniques de stages et d'alternance tout au long de leur cursus.
+              </p>
+              <p className="text-muted-foreground pt-2">
+                À IG2I, nous mettons l'accent sur l'innovation, la recherche et le développement personnel, 
+                formant ainsi des ingénieurs polyvalents, créatifs et prêts à relever les défis du monde professionnel.
+              </p>
+          </FadeInComponent>
+
+          <FadeInComponent className="w-full md:w-1/2" delay={200}>
             <Image
               src="/placeholder.svg?height=400&width=600"
               alt="Campus IG2I Centrale Lille"
@@ -66,12 +70,20 @@ export function School() {
               height={400}
               className="rounded-lg object-cover w-full h-[400px]  bg-gray-200"
             />
-          </div>
+          </FadeInComponent>
         </div>
 
         <div className="space-y-2">
+          <FadeInComponent>
+
           <h3 className="text-xl font-semibold">Témoignages</h3>
+          </FadeInComponent>
+          <FadeInComponent>
+
             <Separator />
+          </FadeInComponent>
+          <FadeInComponent>
+
           <Card className="border-none shadow-none pt-3">
             <CardContent className="p-6">
               <Carousel className="w-full max-w-xl mx-auto">
@@ -102,6 +114,7 @@ export function School() {
               </Carousel>
             </CardContent>
           </Card>
+          </FadeInComponent>
         </div>
       </div>
     </section>

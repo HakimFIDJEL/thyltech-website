@@ -1,3 +1,5 @@
+import { FadeInComponent } from "../components/FadeInComponent"
+import { FullSeparator } from "../components/FullSeparator"
 import { SectionTitle } from "../components/SectionTitle"
 import { TeamMember } from "../components/TeamMember"
 import { Separator } from "@/components/ui/separator"
@@ -14,19 +16,21 @@ const teamMembers = [
 export function Team() {
   return (
     <section className="relative overflow-hidden bg-background  flex items-center justify-end flex-col" id="équipe">
-      <div className="container px-4 md:px-6 border-l border-r border-border  pt-8 pb-16">
         <SectionTitle 
           title="L'Équipe | Thylt" 
           subtitle="Découvrez les talents qui font notre force"
-          className="mb-4" 
         />
+        <FullSeparator />
+      <div className="container px-4 md:px-6 border-l border-r border-border  pt-8 pb-16">
         
         <div className="space-y-0">
           {teamMembers.map((member, index) => (
-            <div key={member.name}>
-              <TeamMember {...member} />
-              {index < teamMembers.length - 1 && <Separator />}
-            </div>
+            <FadeInComponent delay={200}>
+              <div key={member.name}>
+                <TeamMember {...member} />
+                {index < teamMembers.length - 1 && <Separator />}
+              </div>
+            </FadeInComponent>
           ))}
         </div>
       </div>
