@@ -20,13 +20,17 @@ Avant de commencer, assure-toi d'avoir installé les outils suivants sur ta mach
 
 2. Installe les dépendances du projet :
 
-   ```npm install```
+   ```
+   npm install
+   ```
 
 ## Lancer l'application en mode développement
 
 Pour démarrer l'application en mode développement, utilise la commande suivante :
 
-   ```npm run dev```
+   ```
+   npm run dev
+   ```
 
 Cela lancera le serveur de développement et tu pourras accéder au site à l'adresse [http://localhost:3000](http://localhost:3000).
 
@@ -34,7 +38,9 @@ Cela lancera le serveur de développement et tu pourras accéder au site à l'ad
 
 Pour générer la version optimisée pour la production, exécute la commande suivante :
 
-   ```npm run build```
+   ```
+   npm run build
+   ```
 
 Cela construira l'application dans le dossier `.next` et optimisera les performances.
 
@@ -42,7 +48,9 @@ Cela construira l'application dans le dossier `.next` et optimisera les performa
 
 Une fois le build effectué, tu peux démarrer le serveur de production avec la commande suivante :
 
-   ```npm run start```
+   ```
+   npm run start
+   ```
 
 Cela lancera le serveur sur [http://localhost:3000](http://localhost:3000).
 
