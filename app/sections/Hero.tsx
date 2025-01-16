@@ -45,7 +45,7 @@ export function Hero() {
           </p>
           <div className="mt-10 flex items-start gap-x-6">
             <Button size="lg" asChild>
-              <a href="#learn-more">
+              <a href="#projet">
                 En savoir plus
                 <ArrowRight className="ml-2 h-4 w-4" />
               </a>

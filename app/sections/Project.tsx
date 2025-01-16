@@ -7,19 +7,84 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
+import { Target, Rocket, Eye, HelpCircle } from "lucide-react";
+import {
+  BellIcon,
+  CalendarIcon,
+  FileTextIcon,
+  GlobeIcon,
+  InputIcon,
+} from "@radix-ui/react-icons";
+import { BentoCard, BentoGrid } from "@/components/ui/bento-grid";
+
+
+
 export function Project() {
+
+
+  const features = [
+    {
+      Icon: Eye,
+      name: "Notre vision",
+      description: "Révolutionner l'éducation en combinant théorie et pratique.",
+      href: "/",
+      cta: "Learn more",
+      background: <img className="absolute -right-20 -top-20 opacity-60" />,
+      className: "lg:col-start-1 lg:col-end-1 lg:row-start-1 lg:row-end-2",
+    },
+    {
+      Icon: Target,
+      name: "Nos objectifs",
+      description: "Former la prochaine génération de leaders technologiques.",
+      href: "/",
+      cta: "Learn more",
+      background: <img className="absolute -right-20 -top-20 opacity-60" />,
+      className: "lg:col-start-1 lg:col-end-1 lg:row-start-2 lg:row-end-4",
+    },
+    {
+      Icon: Rocket,
+      name: "Notre mission",
+      description: "Créer un environnement d'apprentissage innovant.",
+      href: "/",
+      cta: "Learn more",
+      background: <img className="absolute -right-20 -top-20 opacity-60" />,
+      className: "lg:col-start-2 lg:col-end-2 lg:row-start-1 lg:row-end-3",
+    },
+    {
+      Icon: HelpCircle,
+      name: "Questions",
+      description: "Réponses aux questions fréquemment posées.",
+      href: "/",
+      cta: "Learn more",
+      background: <img className="absolute -right-20 -top-20 opacity-60" />,
+      className: "lg:col-start-2 lg:col-end-2 lg:row-start-3 lg:row-end-4",
+    },
+  ];
+
   return (
-    <section className="relative overflow-hidden bg-background flex items-center justify-end flex-col">
+    <section
+      className="relative overflow-hidden bg-background flex items-center justify-end flex-col"
+      id="projet"
+    >
       <div className="container px-4 md:px-6 border-l border-r border-border  pt-8 pb-16">
         <SectionTitle
-          title="Le Projet"
+          title="Le Projet | Thyltech"
           className="mb-12"
           subtitle="Découvrez notre vision, mission, objectifs et plus encore."
         />
 
-        <div className="space-y-12">
+        <BentoGrid className="lg:grid-rows-3 lg:grid-cols-2 lg:gap-4">
+          {features.map((feature) => (
+            <BentoCard key={feature.name} {...feature} />
+          ))}
+        </BentoGrid>
+
+        {/* <div className="space-y-12">
           <div className="space-y-2">
-            <h3 className="text-xl font-semibold">Vision</h3>
+            <h3 className="text-xl font-semibold flex items-center gap-2">
+              <Eye className="h-6 w-6 text-primary" />
+              Vision
+            </h3>
             <Separator />
             <p className="text-muted-foreground pt-3">
               Notre projet vise à révolutionner l'éducation en combinant les
@@ -30,7 +95,10 @@ export function Project() {
 
 
           <div className="space-y-2">
-            <h3 className="text-xl font-semibold">Mission</h3>
+            <h3 className="text-xl font-semibold flex items-center gap-2">
+              <Target className="h-6 w-6 text-primary" />
+              Mission
+            </h3>
             <Separator />
             <p className="text-muted-foreground pt-3">
               Nous formons la prochaine génération de leaders technologiques en
@@ -39,7 +107,10 @@ export function Project() {
           </div>
 
           <div className="space-y-2">
-            <h3 className="text-xl font-semibold">Objectifs</h3>
+            <h3 className="text-xl font-semibold flex items-center gap-2">
+              <Rocket className="h-6 w-6 text-primary" />
+              Objectifs
+            </h3>
             <Separator />
             <ul className="list-disc pl-6 space-y-2 text-muted-foreground pt-3">
               <li>
@@ -61,7 +132,10 @@ export function Project() {
 
 
           <div className="space-y-2">
-            <h3 className="text-xl font-semibold">FAQ</h3>
+            <h3 className="text-xl font-semibold flex items-center gap-2">
+              <HelpCircle className="h-6 w-6 text-primary" />
+              FAQ
+            </h3>
             <Separator />
             <Accordion type="single" collapsible className="w-full pt-3">
               <AccordionItem value="item-1">
@@ -95,7 +169,7 @@ export function Project() {
               </AccordionItem>
             </Accordion>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

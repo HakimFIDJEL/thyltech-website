@@ -10,9 +10,10 @@ import {
 import { Separator } from "@/components/ui/separator"
 import { ContactItem } from "../components/ContactItem"
 
+
 export function Contact() {
   return (
-    <section className="relative overflow-hidden bg-background flex items-center justify-end flex-col">
+    <section className="relative overflow-hidden bg-background flex items-center justify-end flex-col" id="contact">
       <div className="container px-4 md:px-6 border-l border-r border-border  pt-8 pb-16">
         <SectionTitle 
           title="Contactez-nous" 

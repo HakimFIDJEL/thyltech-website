@@ -6,6 +6,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
 import { Separator } from '@/components/ui/separator'
 
+
 const testimonials = [
   {
     name: "Marie Dupont",
@@ -29,7 +30,7 @@ const testimonials = [
 
 export function School() {
   return (
-    <section className="relative overflow-hidden bg-background flex items-center justify-end flex-col">
+    <section className="relative overflow-hidden bg-background flex items-center justify-end flex-col" id="école">
       <div className="container px-4 md:px-6 border-l border-r border-border  py-8 ">
         <SectionTitle 
           title="IG2I Centrale Lille" 
@@ -96,8 +97,8 @@ export function School() {
                     </CarouselItem>
                   ))}
                 </CarouselContent>
-                <CarouselPrevious />
-                <CarouselNext />
+                <CarouselPrevious variant="default" />
+                <CarouselNext variant="default" />
               </Carousel>
             </CardContent>
           </Card>

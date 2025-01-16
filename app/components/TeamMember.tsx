@@ -1,17 +1,31 @@
-import Image from 'next/image'
-import { Github, Mail } from 'lucide-react'
-import { Button } from "@/components/ui/button"
+import Image from "next/image";
+import { Mail, Linkedin } from "lucide-react";
+import { Button } from "@/components/ui/button";
+
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 interface TeamMemberProps {
-  name: string
-  role: string
-  job: string
-  image: string
-  github?: string
-  email?: string
+  name: string;
+  role: string;
+  job: string;
+  image: string;
+  linkedin?: string;
+  email?: string;
 }
 
-export function TeamMember({ name, role, job, image, github, email }: TeamMemberProps) {
+export function TeamMember({
+  name,
+  role,
+  job,
+  image,
+  linkedin,
+  email,
+}: TeamMemberProps) {
   return (
     <div className="flex items-center justify-between py-4 group hover:bg-accent rounded-md transition-colors duration-200 px-4">
       <div className="flex items-center space-x-4">
@@ -30,23 +44,40 @@ export function TeamMember({ name, role, job, image, github, email }: TeamMember
           <p className="text-xs text-muted-foreground">{job}</p>
         </div>
       </div>
-      <div className="flex space-x-2">
-        {github && (
-          <Button variant="outline" size="icon" asChild>
-            <a href={github} target="_blank" rel="noopener noreferrer" aria-label={`GitHub de ${name}`}>
-              <Github className="h-4 w-4" />
-            </a>
-          </Button>
-        )}
+      <div className="flex gap-2">
         {email && (
-          <Button variant="outline" size="icon" asChild>
-            <a href={`mailto:${email}`} aria-label={`Email de ${name}`}>
-              <Mail className="h-4 w-4" />
-            </a>
-          </Button>
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Button variant="secondary" size="icon" asChild>
+                  <a href={`mailto:${email}`} aria-label={`Email de ${name}`}>
+                    <Mail className="h-4 w-4" />
+                  </a>
+                </Button>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>Email de {name}</p>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
+        )}
+        {linkedin && (
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Button variant="default" size="icon" asChild>
+                  <a href={linkedin} aria-label={`Linkedin de ${name}`}>
+                    <Linkedin className="h-4 w-4" />
+                  </a>
+                </Button>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>Linkedin de {name}</p>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
         )}
       </div>
     </div>
-  )
+  );
 }
-
