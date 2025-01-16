@@ -1,7 +1,6 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
 import { ArrowUp } from "lucide-react";
 
 import {
@@ -11,7 +10,7 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 
-import react, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 export function TopButton() {
   const [showButton, setShowButton] = useState(false);

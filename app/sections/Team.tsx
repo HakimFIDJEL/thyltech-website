@@ -25,8 +25,8 @@ export function Team() {
         
         <div className="space-y-0">
           {teamMembers.map((member, index) => (
-            <FadeInComponent delay={200}>
-              <div key={member.name}>
+            <FadeInComponent delay={200} key={member.name}>
+              <div>
                 <TeamMember {...member} />
                 {index < teamMembers.length - 1 && <Separator />}
               </div>

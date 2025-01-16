@@ -1,12 +1,5 @@
 import { Button } from "@/components/ui/button";
 
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
-
 interface ContactItemProps {
   name: string;
   href: string;
@@ -25,9 +18,7 @@ export function ContactItem({ name, href, icon }: ContactItemProps) {
         </div>
       </div>
 
-      <Button size="icon">
-        {icon}
-      </Button>
+      <Button size="icon">{icon}</Button>
     </a>
   );
 }

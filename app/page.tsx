@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 import { Hero } from "./sections/Hero";
 import { Project } from "./sections/Project";
 import { FullSeparator } from "./components/FullSeparator";
@@ -11,8 +9,6 @@ import { Planning } from "./sections/Planning";
 export default function Home() {
   return (
     <main className="pt-16">
-      
-      
       <Hero />
       <Project />
       <FullSeparator />
@@ -24,13 +20,6 @@ export default function Home() {
       <FullSeparator />
       <Contact />
       <FullSeparator />
-
-
-
-
-
-
-      
     </main>
   );
 }

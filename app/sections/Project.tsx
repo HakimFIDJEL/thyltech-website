@@ -1,22 +1,12 @@
 import { SectionTitle } from "../components/SectionTitle";
-import { Separator } from "@/components/ui/separator";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-
 import { FadeInComponent } from "../components/FadeInComponent";
-
 import { Target, Rocket, Eye, HelpCircle } from "lucide-react";
-import {
-  BellIcon,
-  CalendarIcon,
-  FileTextIcon,
-  GlobeIcon,
-  InputIcon,
-} from "@radix-ui/react-icons";
 import { BentoCard, BentoGrid } from "@/components/ui/bento-grid";
 import { FullSeparator } from "../components/FullSeparator";
 
@@ -37,7 +27,7 @@ export function Project() {
         </>
       ),
       cta: "En savoir plus",
-      background: <img className="absolute -right-20 -top-20 opacity-60" />,
+      background: <></>,
       className:
         "lg:col-start-1 lg:col-end-1 lg:row-start-1 lg:row-end-2 bg-background",
     },
@@ -66,7 +56,7 @@ export function Project() {
         </>
       ),
       cta: "En savoir plus",
-      background: <img className="absolute -right-20 -top-20 opacity-60" />,
+      background: <></>,
       className: "lg:col-start-1 lg:col-end-1 lg:row-start-2 lg:row-end-4",
     },
     {
@@ -82,7 +72,7 @@ export function Project() {
         </>
       ),
       cta: "En savoir plus",
-      background: <img className="absolute -right-20 -top-20 opacity-60" />,
+      background: <></>,
       className: "lg:col-start-2 lg:col-end-2 lg:row-start-1 lg:row-end-3",
     },
     {
@@ -125,11 +115,10 @@ export function Project() {
         </>
       ),
       cta: "En savoir plus",
-      background: <img className="absolute -right-20 -top-20 opacity-60" />,
+      background: <></>,
       className: "lg:col-start-2 lg:col-end-2 lg:row-start-3 lg:row-end-4",
     },
   ];
-
 
   return (
     <section
@@ -140,9 +129,8 @@ export function Project() {
         title="Le Projet | Thyltech"
         subtitle="Découvrez notre vision, mission, objectifs et plus encore."
       />
-      <FullSeparator/>
+      <FullSeparator />
       <div className="container px-4 md:px-6 border-l border-r border-border  pt-8 pb-16 space-y-12">
-
         <FadeInComponent>
           <p className="text-md text-muted-foreground">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -158,11 +146,10 @@ export function Project() {
         <FadeInComponent delay={200}>
           <BentoGrid className="lg:grid-rows-3 lg:grid-cols-2 lg:gap-4 grid-rows-4 grid-cols-1">
             {features.map((feature) => (
-              <BentoCard key={feature.name} {...feature}/>
+              <BentoCard key={feature.name} {...feature} />
             ))}
           </BentoGrid>
         </FadeInComponent>
-
 
         {/* <div className="space-y-12">
           <div className="space-y-2">
