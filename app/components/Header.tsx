@@ -87,7 +87,7 @@ export function Header() {
                     onClick={() =>
                       setTheme(theme === "dark" ? "light" : "dark")
                     }
-                    className="text-foreground hidden sm:flex items-center"
+                    className="text-foreground  items-center"
                   >
                     {mounted &&
                       (theme === "dark" ? (
@@ -129,7 +129,7 @@ export function Header() {
               </Tooltip>
             </TooltipProvider>
 
-            <div className="h-6 w-px bg-border mx-4  hidden sm:flex" />
+            <div className="h-6 w-px bg-border mx-4  " />
             <Button asChild>
               <Link href="#contact" className="flex items-center gap-2">
                 <span className="hidden lg:block">Nous contacter</span>
