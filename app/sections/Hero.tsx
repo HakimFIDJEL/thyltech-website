@@ -78,11 +78,11 @@ export function Hero() {
                   alt="School Logo"
                   width={300}
                   height={100}
-                  className="h-24 w-auto"
+                  className="h-24 w-auto object-contain"
                 />
-                <p className="text-muted-foreground text-sm">
+                {/* <p className="text-muted-foreground text-sm text-center">
                   Centrale Lille - IG2I
-                </p>
+                </p> */}
               </div>
               <Separator orientation="vertical" className="h-100 hidden xl:block" />
               <Separator orientation="horizontal" className="w-full block xl:hidden" />
@@ -92,11 +92,11 @@ export function Hero() {
                   alt="CTI Logo"
                   width={300}
                   height={100}
-                  className="h-24 w-auto"
+                  className="h-24 w-auto object-contain"
                 />
-                <p className="text-muted-foreground text-sm">
+                {/* <p className="text-muted-foreground text-sm text-center">
                   Commission des Titres d'Ingénieur
-                </p>
+                </p> */}
               </div>
               <Separator orientation="vertical" className="h-100 hidden xl:block" />
               <Separator orientation="horizontal" className="w-full block xl:hidden" />
@@ -106,9 +106,9 @@ export function Hero() {
                   alt="Notre logo"
                   width={300}
                   height={100}
-                  className="h-24 w-auto"
+                  className="h-24 w-auto object-contain"
                 />
-                <p className="text-muted-foreground text-sm">Notre logo</p>
+                {/* <p className="text-muted-foreground text-sm text-center">Notre logo</p> */}
               </div>
             </div>
           </FadeInComponent>
