@@ -1,11 +1,20 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Mail } from "lucide-react";
 import Image from "next/image";
 import { Separator } from "@/components/ui/separator";
 
 import { FadeInComponent } from "../components/FadeInComponent";
+import { useTheme } from "next-themes";
+import { useEffect } from "react";
 
 export function Hero() {
+  const { theme, setTheme } = useTheme();
+
+  useEffect(() => {
+    setTheme("light");
+  }, []);
+
   return (
     // Left
     <section className="relative overflow-hidden bg-background  flex items-center justify-end flex-col">
@@ -57,7 +66,12 @@ export function Hero() {
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
               </Button>
-              <Button size="lg" variant="outline" asChild className="w-full sm:w-auto ">
+              <Button
+                size="lg"
+                variant="outline"
+                asChild
+                className="w-full sm:w-auto "
+              >
                 <a href="#contact">
                   Nous contacter
                   <Mail className="ml-2 h-4 w-4" />
@@ -73,33 +87,59 @@ export function Hero() {
           <FadeInComponent delay={600}>
             <div className="flex justify-center flex-col gap-8 xl:flex-row xl:gap-16">
               <div className="flex items-center flex-col gap-y-2">
-                <Image
-                  src="/images/ig2i.png"
-                  alt="School Logo"
-                  width={300}
-                  height={100}
-                  className="h-24 w-auto object-contain"
-                />
-                {/* <p className="text-muted-foreground text-sm text-center">
-                  Centrale Lille - IG2I
-                </p> */}
+                {theme === "dark" ? (
+                  <Image
+                    src="/images/ig2i_white.png"
+                    alt="School Logo"
+                    width={300}
+                    height={100}
+                    className="h-24 w-auto object-contain"
+                  />
+                ) : (
+                  <Image
+                    src="/images/ig2i.png"
+                    alt="School Logo"
+                    width={300}
+                    height={100}
+                    className="h-24 w-auto object-contain"
+                  />
+                )}
               </div>
-              <Separator orientation="vertical" className="h-100 hidden xl:block" />
-              <Separator orientation="horizontal" className="w-full block xl:hidden" />
+              <Separator
+                orientation="vertical"
+                className="h-100 hidden xl:block"
+              />
+              <Separator
+                orientation="horizontal"
+                className="w-full block xl:hidden"
+              />
               <div className="flex items-center flex-col gap-y-2">
-                <Image
-                  src="/images/cti.png"
-                  alt="CTI Logo"
-                  width={300}
-                  height={100}
-                  className="h-24 w-auto object-contain"
-                />
-                {/* <p className="text-muted-foreground text-sm text-center">
-                  Commission des Titres d'Ingénieur
-                </p> */}
+                {theme === "dark" ? (
+                  <Image
+                    src="/images/cti_white.png"
+                    alt="CTI Logo"
+                    width={300}
+                    height={100}
+                    className="h-24 w-auto object-contain"
+                  />
+                ) : (
+                  <Image
+                    src="/images/cti.png"
+                    alt="CTI Logo"
+                    width={300}
+                    height={100}
+                    className="h-24 w-auto object-contain"
+                  />
+                )}
               </div>
-              <Separator orientation="vertical" className="h-100 hidden xl:block" />
-              <Separator orientation="horizontal" className="w-full block xl:hidden" />
+              <Separator
+                orientation="vertical"
+                className="h-100 hidden xl:block"
+              />
+              <Separator
+                orientation="horizontal"
+                className="w-full block xl:hidden"
+              />
               <div className="flex items-center flex-col gap-y-2">
                 <Image
                   src=""
