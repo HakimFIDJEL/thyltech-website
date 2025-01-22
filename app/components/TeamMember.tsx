@@ -29,7 +29,7 @@ export function TeamMember({
   email,
 }: TeamMemberProps) {
   return (
-    <div className="flex items-center justify-between py-4 group hover:bg-accent rounded-md transition-colors duration-200 sm:px-4 ">
+    <div className="flex items-center justify-between py-4 group hover:bg-accent rounded-md transition-colors duration-200 sm:px-4 gap-4">
       <div className="flex items-center space-x-4">
         <div className="w-16 h-16 flex-shrink-0">
           <Image
@@ -46,6 +46,7 @@ export function TeamMember({
           <Badge>{job}</Badge>
         </div>
       </div>
+
       <div className="flex-col sm:flex-row flex gap-2">
         {email && (
           <TooltipProvider>
