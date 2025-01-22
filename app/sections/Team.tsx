@@ -11,24 +11,24 @@ const teamMembers = [
     role: "Chef de projet - Relation Client",
     job: "Data Scientist chez ArcelorMittal",
     image: "/placeholder.svg?height=300&width=300",
-    linkedin: "https://github.com/alice",
-    email: "alice@example.com",
+    linkedin: "https://www.linkedin.com/in/melestyl/",
+    email: "tom.tellier--caloone@ig2i.centralelille.fr",
   },
   {
     name: "Théo Colin",
     role: "Ingénieur Qualité",
     job: "Apprenti chef de projet intégrateur chez ARC France",
     image: "/placeholder.svg?height=300&width=300",
-    linkedin: "https://github.com/bob",
-    email: "bob@example.com",
+    linkedin: "https://www.linkedin.com/in/theo-colin/",
+    email: "theo.colin@ig2i.centralelille.fr",
   },
   {
     name: "Léonore Legrand",
     role: "Ingénieur Conception - Adjoint Qualité",
     job: "Ingénieur d'études chez Vilogia",
     image: "/placeholder.svg?height=300&width=300",
-    linkedin: "https://github.com/carol",
-    email: "carol@example.com",
+    // linkedin: "https://github.com/carol",
+    email: "leonore.legrand@ig2i.centralelille.fr",
   },
   {
     name: "Younes Boughriet",
@@ -71,7 +71,7 @@ export function Team() {
       id="équipe"
     >
       <SectionTitle
-        title="L'Équipe | Thylt"
+        title="L'Équipe Thylt"
         subtitle="Découvrez les talents qui font notre force"
       />
       <FullSeparator />

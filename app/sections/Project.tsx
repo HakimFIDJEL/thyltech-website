@@ -42,7 +42,7 @@ export function Project() {
           <h3 className="text-xl font-semibold">Les livrables principaux</h3>
           <Separator />
 
-          <div className="flex flex-wrap gap-4 pt-3">
+          <div className="flex flex-wrap gap-4 pt-3 gap-y-2">
             <Badge className="text-md">Etude de l’existant</Badge>
             <Badge className="text-md">Spécifications fonctionnelles</Badge>
             <Badge className="text-md">Conduite de projet</Badge>

@@ -1,14 +1,20 @@
+"use client";
 import { SectionTitle } from "../components/SectionTitle";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Download, Linkedin, Mail, Send, Loader2  } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import { ContactItem } from "../components/ContactItem";
 import { FadeInComponent } from "../components/FadeInComponent";
 import { FullSeparator } from "../components/FullSeparator";
+import Link from "next/link";
+import { useState } from "react";
 
 export function Contact() {
+
+  const [loading, setLoading] = useState(false);
+
   return (
     <section
       className="relative overflow-hidden bg-background flex items-center justify-end flex-col"
@@ -27,7 +33,7 @@ export function Contact() {
               Notre formulaire de contact
             </p>
             <Separator />
-            <form className="space-y-4">
+            <form className="space-y-4" onSubmit={() => setLoading(true)}>
               <div>
                 <label
                   htmlFor="name"
@@ -35,7 +41,7 @@ export function Contact() {
                 >
                   Nom
                 </label>
-                <Input id="name" placeholder="Votre nom" />
+                <Input id="name" placeholder="Votre nom" required />
               </div>
               <div>
                 <label
@@ -44,7 +50,7 @@ export function Contact() {
                 >
                   Email
                 </label>
-                <Input id="email" type="email" placeholder="votre@email.com" />
+                <Input id="email" type="email" placeholder="votre@email.com" required />
               </div>
               <div>
                 <label
@@ -58,9 +64,12 @@ export function Contact() {
                   placeholder="Votre message"
                   rows={5}
                   className="resize-none"
+                  required
                 />
               </div>
-              <Button type="submit" className="w-full">
+              <Button type="submit" className="w-full flex items-center justify-center gap-2" disabled={loading}>
+                <Send className={`h-4 w-4 ${loading ? 'hidden' : 'block'}`} />
+                <Loader2 className={`animate-spin h-4 w-4 ${loading ? 'block' : 'hidden'}`} />
                 Envoyer
               </Button>
             </form>
@@ -86,17 +95,18 @@ export function Contact() {
 
               <ContactItem
                 name="LinkedIn"
-                href="https://linkedin.com/company/ig2i"
+                href="https://www.linkedin.com/company/thyltech"
                 icon={<Linkedin className="h-4 w-4" />}
               />
 
               <Separator />
 
-              <ContactItem
-                name="GitHub"
-                href="https://github.com"
-                icon={<Github className="h-4 w-4" />}
-              />
+              <Link href="">
+                <Button className="flex items-center justify-center w-full gap-2 mt-4">
+                  <Download className="h-4 w-4"/>
+                  Téléchargez notre plaquette
+                </Button>
+              </Link>
             </div>
 
           
