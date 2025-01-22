@@ -9,6 +9,8 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 
+import { Badge } from "@/components/ui/badge"
+
 interface TeamMemberProps {
   name: string;
   role: string;
@@ -41,7 +43,7 @@ export function TeamMember({
         <div>
           <h3 className="text-lg font-semibold">{name}</h3>
           <p className="text-sm text-muted-foreground">{role}</p>
-          <p className="text-xs text-muted-foreground">{job}</p>
+          <Badge>{job}</Badge>
         </div>
       </div>
       <div className="flex-col sm:flex-row flex gap-2">
@@ -66,7 +68,7 @@ export function TeamMember({
             <Tooltip>
               <TooltipTrigger asChild>
                 <Button variant="default" size="icon" asChild>
-                  <a href={linkedin} aria-label={`Linkedin de ${name}`}>
+                  <a href={linkedin} aria-label={`Linkedin de ${name}`} target="_blank">
                     <Linkedin className="h-4 w-4" />
                   </a>
                 </Button>

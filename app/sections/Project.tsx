@@ -1,124 +1,10 @@
 import { SectionTitle } from "../components/SectionTitle";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 import { FadeInComponent } from "../components/FadeInComponent";
-import { Target, Rocket, Eye, HelpCircle } from "lucide-react";
-import { BentoCard, BentoGrid } from "@/components/ui/bento-grid";
 import { FullSeparator } from "../components/FullSeparator";
+import { Separator } from "@/components/ui/separator";
+import { Badge } from "@/components/ui/badge";
 
 export function Project() {
-  const features = [
-    {
-      Icon: Eye,
-      name: "Notre vision",
-      description:
-        "Révolutionner l'éducation en combinant théorie et pratique.",
-      content: (
-        <>
-          <p className="text-muted-foreground pt-3">
-            Notre projet vise à révolutionner l'éducation en combinant les
-            meilleures pratiques académiques avec les besoins de l'industrie
-            technologique.
-          </p>
-        </>
-      ),
-      cta: "En savoir plus",
-      background: <></>,
-      className:
-        "lg:col-start-1 lg:col-end-1 lg:row-start-1 lg:row-end-2 bg-background",
-    },
-    {
-      Icon: Target,
-      name: "Nos objectifs",
-      description: "Former la prochaine génération de leaders technologiques.",
-      content: (
-        <>
-          <ul className="list-disc pl-6 space-y-2 text-muted-foreground pt-3">
-            <li>
-              Développer un curriculum innovant aligné sur les besoins de
-              l'industrie
-            </li>
-            <li>
-              Établir des partenariats solides avec des entreprises
-              technologiques leaders
-            </li>
-            <li>
-              Créer un environnement d'apprentissage collaboratif et stimulant
-            </li>
-            <li>
-              Favoriser l'innovation et l'entrepreneuriat chez nos étudiants
-            </li>
-          </ul>
-        </>
-      ),
-      cta: "En savoir plus",
-      background: <></>,
-      className: "lg:col-start-1 lg:col-end-1 lg:row-start-2 lg:row-end-4",
-    },
-    {
-      Icon: Rocket,
-      name: "Notre mission",
-      description: "Créer un environnement d'apprentissage innovant.",
-      content: (
-        <>
-          <p className="text-muted-foreground pt-3">
-            Nous formons la prochaine génération de leaders technologiques en
-            offrant une expérience d'apprentissage immersive et pratique.
-          </p>
-        </>
-      ),
-      cta: "En savoir plus",
-      background: <></>,
-      className: "lg:col-start-2 lg:col-end-2 lg:row-start-1 lg:row-end-3",
-    },
-    {
-      Icon: HelpCircle,
-      name: "Questions",
-      description: "Réponses aux questions fréquemment posées.",
-      content: (
-        <>
-          <Accordion type="single" collapsible className="w-full pt-3">
-            <AccordionItem value="item-1">
-              <AccordionTrigger className="text-left gap-4">
-                Quelle est la durée du programme ?
-              </AccordionTrigger>
-              <AccordionContent>
-                Notre programme principal dure 2 ans, avec des options de
-                spécialisation supplémentaires d'un an.
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="item-2">
-              <AccordionTrigger className="text-left gap-4">
-                Quels sont les prérequis pour rejoindre le projet ?
-              </AccordionTrigger>
-              <AccordionContent>
-                Les candidats doivent avoir un baccalauréat en informatique ou
-                dans un domaine connexe, ainsi qu'une passion pour la
-                technologie et l'innovation.
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="item-3">
-              <AccordionTrigger className="text-left gap-4">
-                Y a-t-il des opportunités de stage intégrées au programme ?
-              </AccordionTrigger>
-              <AccordionContent>
-                Oui, notre programme comprend des stages obligatoires avec nos
-                partenaires industriels, offrant une expérience pratique
-                précieuse.
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
-        </>
-      ),
-      cta: "En savoir plus",
-      background: <></>,
-      className: "lg:col-start-2 lg:col-end-2 lg:row-start-3 lg:row-end-4",
-    },
-  ];
 
   return (
     <section
@@ -126,122 +12,50 @@ export function Project() {
       id="projet"
     >
       <SectionTitle
-        title="Le Projet | Thyltech"
+        title="Le Projet Thyltech"
         subtitle="Découvrez notre vision, mission, objectifs et plus encore."
       />
       <FullSeparator />
       <div className="container px-4 md:px-6 border-l border-r border-border  pt-8 pb-16 space-y-12">
-        <FadeInComponent>
-          <p className="text-md text-muted-foreground">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+
+        <FadeInComponent delay={200} className="space-y-2">
+          <h3 className="text-xl font-semibold">Le projet</h3>
+          <Separator />
+          <p className="pt-3 text-md">
+            Dans le cadre de la fin de notre parcours de <strong>5 années à l'IG2I Centrale Lille,</strong> notre équipe s'engage dans la réalisation d'un <strong>Projet de Fin d'Études (PFE)</strong>. Ce projet, conçu en collaboration avec une entreprise partenaire, vise à répondre à des besoins concrets par le développement de <strong>solutions innovantes et performantes</strong>.
+            <br />
+            <br />
+            Fortement ancrés dans une démarche scientifique et professionnelle, nous mobilisons nos compétences en gestion de projet, conception technique, innovation et qualité. Ce travail inclut la recherche et l’analyse, la formalisation des spécifications fonctionnelles, le développement de prototypes et leur validation par des tests rigoureux.
+            <br />
+            <br />
+            En parallèle, notre équipe s'est particulièrement intéressée à une thématique, l’importance croissante du <strong>sport et de la santé</strong> dans nos sociétés. Conscients des enjeux liés à l'amélioration du quotidien des sportifs, nous voyons un fort potentiel dans la conception <strong>d'outils ingénieux et performants</strong> dédiés à cette thématique. Notre volonté est de mettre notre expertise au service de projets visant à optimiser les performances, prévenir les blessures et favoriser le bien-être des pratiquants par exemple.
+            <br />
+            <br />
+            Ainsi, nous serions enthousiastes à l'idée de collaborer avec une <strong>entreprise souhaitant explorer des solutions technologiques innovantes</strong> dans ces domaines.
+            <br />
+            <br />
+            Notre ambition est d'offrir à notre partenaire des <strong>résultats concrets et exploitables</strong>, tout en valorisant notre savoir-faire au sein d’un projet structuré et collaboratif dans le domaine du sport et de sa science.
           </p>
         </FadeInComponent>
 
-        <FadeInComponent delay={200}>
-          <BentoGrid className="lg:grid-rows-3 lg:grid-cols-2 lg:gap-4 grid-rows-4 grid-cols-1">
-            {features.map((feature) => (
-              <BentoCard key={feature.name} {...feature} />
-            ))}
-          </BentoGrid>
+        <FadeInComponent delay={200} className="space-y-2">
+          <h3 className="text-xl font-semibold">Les livrables principaux</h3>
+          <Separator />
+
+          <div className="flex flex-wrap gap-4 pt-3">
+            <Badge className="text-md">Etude de l’existant</Badge>
+            <Badge className="text-md">Spécifications fonctionnelles</Badge>
+            <Badge className="text-md">Conduite de projet</Badge>
+            <Badge className="text-md">Conception technique</Badge>
+            <Badge className="text-md">Réalisation</Badge>
+            <Badge className="text-md">Méthode scientifique</Badge>
+            <Badge className="text-md">Tests & Livraison de solution</Badge>
+            <Badge className="text-md">Démarche qualité</Badge>
+            <Badge className="text-md">Livraison techniques</Badge>
+          </div>
+          
         </FadeInComponent>
 
-        {/* <div className="space-y-12">
-          <div className="space-y-2">
-            <h3 className="text-xl font-semibold flex items-center gap-2">
-              <Eye className="h-6 w-6 text-primary" />
-              Vision
-            </h3>
-            <Separator />
-            <p className="text-muted-foreground pt-3">
-              Notre projet vise à révolutionner l'éducation en combinant les
-              meilleures pratiques académiques avec les besoins de l'industrie
-              technologique.
-            </p>
-          </div>
-
-
-          <div className="space-y-2">
-            <h3 className="text-xl font-semibold flex items-center gap-2">
-              <Target className="h-6 w-6 text-primary" />
-              Mission
-            </h3>
-            <Separator />
-            <p className="text-muted-foreground pt-3">
-              Nous formons la prochaine génération de leaders technologiques en
-              offrant une expérience d'apprentissage immersive et pratique.
-            </p>
-          </div>
-
-          <div className="space-y-2">
-            <h3 className="text-xl font-semibold flex items-center gap-2">
-              <Rocket className="h-6 w-6 text-primary" />
-              Objectifs
-            </h3>
-            <Separator />
-            <ul className="list-disc pl-6 space-y-2 text-muted-foreground pt-3">
-              <li>
-                Développer un curriculum innovant aligné sur les besoins de
-                l'industrie
-              </li>
-              <li>
-                Établir des partenariats solides avec des entreprises
-                technologiques leaders
-              </li>
-              <li>
-                Créer un environnement d'apprentissage collaboratif et stimulant
-              </li>
-              <li>
-                Favoriser l'innovation et l'entrepreneuriat chez nos étudiants
-              </li>
-            </ul>
-          </div>
-
-
-          <div className="space-y-2">
-            <h3 className="text-xl font-semibold flex items-center gap-2">
-              <HelpCircle className="h-6 w-6 text-primary" />
-              FAQ
-            </h3>
-            <Separator />
-            <Accordion type="single" collapsible className="w-full pt-3">
-              <AccordionItem value="item-1">
-                <AccordionTrigger>
-                  Quelle est la durée du programme ?
-                </AccordionTrigger>
-                <AccordionContent>
-                  Notre programme principal dure 2 ans, avec des options de
-                  spécialisation supplémentaires d'un an.
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="item-2">
-                <AccordionTrigger>
-                  Quels sont les prérequis pour rejoindre le projet ?
-                </AccordionTrigger>
-                <AccordionContent>
-                  Les candidats doivent avoir un baccalauréat en informatique ou
-                  dans un domaine connexe, ainsi qu'une passion pour la
-                  technologie et l'innovation.
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="item-3">
-                <AccordionTrigger>
-                  Y a-t-il des opportunités de stage intégrées au programme ?
-                </AccordionTrigger>
-                <AccordionContent>
-                  Oui, notre programme comprend des stages obligatoires avec nos
-                  partenaires industriels, offrant une expérience pratique
-                  précieuse.
-                </AccordionContent>
-              </AccordionItem>
-            </Accordion>
-          </div>
-        </div> */}
       </div>
     </section>
   );
