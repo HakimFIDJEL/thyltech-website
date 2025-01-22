@@ -53,9 +53,8 @@ export function Hero() {
           </FadeInComponent>
           <FadeInComponent delay={200}>
             <p className="mt-6 text-lg leading-8 text-muted-foreground">
-              Dans les domaines de l'industrie aérospatiale/aéronautique. Pour
-              des sujets autour du logiciel embarqué et/ou de l'Intelligence
-              Artificielle
+              Dans le domaine du sport et de la santé. <br /  >
+              Pour des sujets autour du logiciel embarqué et/ou de  l'Intelligence Artificielle
             </p>
           </FadeInComponent>
           <FadeInComponent delay={400}>
