@@ -100,7 +100,7 @@ export function Team() {
               {motivations.map((motivation, index) => (
                 <FadeInComponent delay={200} key={`motivation-${index}`}>
                   <div className="flex items-center space-x-4 p-3 rounded-lg border border-border hover:bg-accent transition-all duration-200 hover:pl-6">
-                    <ArrowRight size={24} />
+                    <ArrowRight size={24} className="flex-shrink-0" />
                     <div>{motivation}</div>
                   </div>
                 </FadeInComponent>
@@ -116,7 +116,7 @@ export function Team() {
               {axes_interets.map((axe, index) => (
                 <FadeInComponent delay={200} key={`axe-${index}`}>
                   <div className="flex items-center space-x-4 p-3 rounded-lg border border-border hover:bg-accent transition-all duration-200 hover:pl-6">
-                    <ArrowRight size={24} />
+                    <ArrowRight size={24} className="flex-shrink-0" />
                     <div>{axe}</div>
                   </div>
                 </FadeInComponent>
