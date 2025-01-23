@@ -2,7 +2,7 @@ import { Separator } from "@/components/ui/separator";
 import { FadeInComponent } from "../components/FadeInComponent";
 import { FullSeparator } from "../components/FullSeparator";
 import { SectionTitle } from "../components/SectionTitle";
-import { ChevronDown, ChevronRight } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
 export function Planning() {
@@ -81,6 +81,7 @@ export function Planning() {
                 </p>
               </div>
             </div>
+
 
             {/* Conception */}
             <div className="flex items-center gap-4">
