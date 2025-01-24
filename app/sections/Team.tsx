@@ -27,7 +27,7 @@ const teamMembers = [
     role: "Ingénieur Conception - Adjoint Qualité",
     job: "Ingénieur d'études chez Vilogia",
     image: "/placeholder.svg?height=300&width=300",
-    // linkedin: "https://github.com/carol",
+    linkedin: "https://www.linkedin.com/in/léonore-legrand-64b312282/",
     email: "leonore.legrand@ig2i.centralelille.fr",
   },
   {
@@ -49,19 +49,19 @@ const teamMembers = [
 ];
 
 const motivations = [
-  "Établir une collaboration fiable avec vous.",
-  "Élaborer un projet adapté à votre entreprise.",
-  "Exploiter nos compétences techniques et méthodologiques.",
-  "Proposer une solution innovante et ingénieuse.",
-  "Recevoir vos conseils et fusionner avec votre expertise.",
+  "Co-construire un projet à forte valeur ajoutée",
+  "Proposer une solution innovante",
+  "Recevoir vos conseils et fusionner avec votre expertise",
+  "S'orienter vers une collaboration orientée résultats",
+  "Faire valoir nos compétences techniques et méthodologiques",
 ];
 
 const axes_interets = [
-  "Particulièrement intéressés par le sport et sa science.",
-  "Convaincus que le sport joue un rôle important dans la santé.",
-  "L'innovation est vitale pour rendre le sport accessible.",
-  "L’IA et la Data sont essentiels et porteurs d’avenir dans le sport.",
-  "L’utilisation de l’IOT & ses applications dans le sport.",
+  "Suivi/Optimisation des performances par des solutions de capture",
+  "Réduction des blessures en exploitant les données biomécaniques",
+  "Evaluation des compétences et axes d'amélioration digitaux",
+  "Entraînements et accompagnement virtuel par AR/VR",
+  "IA et Data pour une pratique du sport plus accessible",
 ];
 
 export function Team() {

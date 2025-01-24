@@ -21,20 +21,31 @@ export function Project() {
         <FadeInComponent delay={200} className="space-y-2">
           <h3 className="text-xl font-semibold">Le projet</h3>
           <Separator />
-          <p className="pt-3 text-md">
-            Dans le cadre de la fin de notre parcours de <strong>5 années à l'IG2I Centrale Lille,</strong> notre équipe s'engage dans la réalisation d'un <strong>Projet de Fin d'Études (PFE)</strong>. Ce projet, conçu en collaboration avec une entreprise partenaire, vise à répondre à des besoins concrets par le développement de <strong>solutions innovantes et performantes</strong>.
+          <p className="pt-3 text-md text-muted-foreground">
+            Dans le cadre de notre <strong>Projet de Fin d'Études Ingénieur (PFE)</strong> à <strong>l'IG2I Centrale Lille</strong>, nous avons choisi d'explorer une problématique au cœur des
+            préoccupations modernes : <strong>comment la technologie peut-elle transformer positivement le sport et la santé ?</strong>
             <br />
             <br />
-            Fortement ancrés dans une démarche scientifique et professionnelle, nous mobilisons nos compétences en gestion de projet, conception technique, innovation et qualité. Ce travail inclut la recherche et l’analyse, la formalisation des spécifications fonctionnelles, le développement de prototypes et leur validation par des tests rigoureux.
+            Aujourd'hui, les entreprises évoluant dans ce domaine recherchent des <strong>solutions concrètes</strong> pour répondre à des <strong>défis critiques : maximiser les
+            performances des athlètes, prévenir les blessures</strong> ou encore <strong>démocratiser l'accès à des outils de bien-être personnalisés</strong>. Ce besoin est
+            d'autant plus pressant dans un marché compétitif où <strong>l'innovation est clé</strong>.
             <br />
             <br />
-            En parallèle, notre équipe s'est particulièrement intéressée à une thématique, l’importance croissante du <strong>sport et de la santé</strong> dans nos sociétés. Conscients des enjeux liés à l'amélioration du quotidien des sportifs, nous voyons un fort potentiel dans la conception <strong>d'outils ingénieux et performants</strong> dédiés à cette thématique. Notre volonté est de mettre notre expertise au service de projets visant à optimiser les performances, prévenir les blessures et favoriser le bien-être des pratiquants par exemple.
+            C'est dans cet esprit que notre équipe propose un projet alliant <strong>expertise technique</strong> et <strong>vision scientifique</strong>, pour concevoir des outils technologiques
+            <strong> avancés</strong>. Notre démarche intègrerait :
             <br />
             <br />
-            Ainsi, nous serions enthousiastes à l'idée de collaborer avec une <strong>entreprise souhaitant explorer des solutions technologiques innovantes</strong> dans ces domaines.
+            - <strong>La collecte et l’analyse de données biomécaniques et physiologiques</strong> pour proposer des solutions adaptées et personnalisées.
+            <br />
+            - <strong>Le développement d'algorithmes prédictifs ou d’aide à la décision</strong> pour accompagner sportifs et professionnels.
+            <br />
+            - <strong>La conception de prototypes fonctionnels</strong> répondant à des problématiques réelles identifiées en partenariat avec l’entreprise.
+            
             <br />
             <br />
-            Notre ambition est d'offrir à notre partenaire des <strong>résultats concrets et exploitables</strong>, tout en valorisant notre savoir-faire au sein d’un projet structuré et collaboratif dans le domaine du sport et de sa science.
+            Nous pensons que ces solutions peuvent non seulement renforcer <strong>la compétitivité des entreprises</strong> dans le secteur, mais aussi <strong>générer un impact
+            tangible</strong> sur le bien-être des utilisateurs finaux. Collaborer avec nous, c'est bénéficier d'une <strong>équipe motivée, multidisciplinaire,</strong> capable d’apporter
+            une <strong>expertise pointue en ingénierie</strong> tout en répondant aux <strong>besoins stratégiques</strong> d'un marché en pleine mutation  
           </p>
         </FadeInComponent>
 

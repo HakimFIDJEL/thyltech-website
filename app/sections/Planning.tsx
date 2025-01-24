@@ -73,7 +73,7 @@ export function Planning() {
               <Badge className="text-md w-28 flex-shrink-0 justify-center">Septembre</Badge>
               <Separator className="sm:w-10 bg-current w-4" />
               <div className="flex flex-col">
-                <h4 className="text-md font-semibold text-transparent bg-[linear-gradient(to_right,_var(--tw-gradient-from),_var(--tw-gradient-to)_50%)] from-foreground to-primary bg-clip-text">
+                <h4 className="text-md font-semibold text-transparent bg-gradient-to-r from-foreground to-primary bg-clip-text w-fit">
                   Spécifications
                 </h4>
                 <p className="text-sm">
@@ -90,7 +90,7 @@ export function Planning() {
               </Badge>
               <Separator className="sm:w-10 bg-current w-4" />
               <div className="flex flex-col">
-                <h4 className="text-md font-semibold text-transparent bg-[linear-gradient(to_right,_var(--tw-gradient-from),_var(--tw-gradient-to)_50%)] from-foreground to-primary bg-clip-text">
+                <h4 className="text-md font-semibold text-transparent bg-gradient-to-r from-foreground to-primary bg-clip-text w-fit">
                   Conception
                 </h4>
                 <p className="text-sm">
@@ -104,7 +104,7 @@ export function Planning() {
               <Badge className="text-md w-28 flex-shrink-0 justify-center">Novembre</Badge>
               <Separator className="sm:w-10 bg-current w-4" />
               <div className="flex flex-col">
-                <h4 className="text-md font-semibold text-transparent bg-[linear-gradient(to_right,_var(--tw-gradient-from),_var(--tw-gradient-to)_50%)] from-foreground to-primary bg-clip-text">
+                <h4 className="text-md font-semibold text-transparent bg-gradient-to-r from-foreground to-primary bg-clip-text w-fit">
                   Réalisation
                 </h4>
                 <p className="text-sm">
@@ -118,7 +118,7 @@ export function Planning() {
               <Badge className="text-md w-28 flex-shrink-0 justify-center">Décembre</Badge>
               <Separator className="sm:w-10 bg-current w-4" />
               <div className="flex flex-col">
-                <h4 className="text-md font-semibold text-transparent bg-[linear-gradient(to_right,_var(--tw-gradient-from),_var(--tw-gradient-to)_50%)] from-foreground to-primary bg-clip-text">
+                <h4 className="text-md font-semibold text-transparent bg-gradient-to-r from-foreground to-primary bg-clip-text w-fit">
                   Validations
                 </h4>
                 <p className="text-sm">
@@ -132,7 +132,7 @@ export function Planning() {
               <Badge className="text-md w-28 flex-shrink-0 justify-center">Janvier</Badge>
               <Separator className="sm:w-10 bg-current w-4" />
               <div className="flex flex-col">
-                <h4 className="text-md font-semibold text-transparent bg-[linear-gradient(to_right,_var(--tw-gradient-from),_var(--tw-gradient-to)_50%)] from-foreground to-primary bg-clip-text">
+                <h4 className="text-md font-semibold text-transparent bg-gradient-to-r from-foreground to-primary bg-clip-text w-fit">
                   Livraison
                 </h4>
                 <p className="text-sm">

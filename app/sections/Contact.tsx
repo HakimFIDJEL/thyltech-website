@@ -101,7 +101,7 @@ export function Contact() {
 
               <Separator />
 
-              <Link href="">
+              <Link href="/Thyltech_Plaquette.pdf" target="_blank" download>
                 <Button className="flex items-center justify-center w-full gap-2 mt-4">
                   <Download className="h-4 w-4"/>
                   Téléchargez notre plaquette
