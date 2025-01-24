@@ -81,13 +81,18 @@ export function School() {
             </p>
           </FadeInComponent>
 
-          <FadeInComponent className="w-full md:w-1/2" delay={200}>
+          <FadeInComponent className="w-full md:w-1/2 relative" delay={200}>
             <Image
-              src="/placeholder.svg?height=400&width=600"
+              src="/images/Vie_Campus_IG2I.jpg"
               alt="Campus IG2I Centrale Lille"
               width={600}
               height={400}
               className="rounded-lg object-cover w-full h-[400px]  bg-gray-200"
+            />
+
+            <div
+              // Gradient overlay
+              className="absolute inset-0 bg-gradient-to-b from-transparent h-[400px] to-primary opacity-20 rounded-lg"
             />
           </FadeInComponent>
         </div>
