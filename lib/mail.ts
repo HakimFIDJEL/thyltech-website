@@ -1,7 +1,6 @@
 "use server";
 
 import nodemailer from "nodemailer";
-import { renderToString } from "react-dom/server";
 import { render } from "@react-email/render";
 import { EmailTemplate } from "@/lib/templates/email";
 import React from "react";
@@ -51,7 +50,7 @@ export async function sendMail({
       from: "no-reply@tyltech.com",
       to: THYLTECH_EMAIL,
       subject: "Thyltech - Nouveau message de contact",
-      html: body, // Utilisation du corps HTML généré par React
+      html: body,
     });
 
     console.log("Email sent: ", sendResult);
@@ -65,12 +64,15 @@ export async function sendMail({
 export async function compileTemplate(name: string, email: string, message: string) {
   const date = new Date().toLocaleDateString();
 
-  // Conversion du composant React en chaîne HTML
 
-  const htmlBody = await render(
-    <EmailTemplate name={name} email={email} message={message} date={date} />
+  const htmlBody = render(
+    React.createElement(EmailTemplate, { 
+      name: name,
+      email: email,
+      message: message,
+      date: date
+    })
   );
-  // const htmlBody = "";
 
 
   return htmlBody;

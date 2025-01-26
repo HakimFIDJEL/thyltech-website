@@ -11,14 +11,105 @@ import Link from "next/link";
 import { Mail } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 
-export function EmailTemplate({
-  name,
-  email,
-  message,
-  date,
-}: ContactProps) {
-  return <>
-      <main className="bg-gray-100 min-h-screen py-16 flex items-center justify-center">
+export function EmailTemplate({ name, email, message, date }: ContactProps) {
+  return (
+    
+    <>
+      <div
+        style={{
+          fontFamily: "Inter, Arial, sans-serif",
+          backgroundColor: "#f3f4f6",
+          padding: "40px",
+          borderRadius: "8px",
+        }}
+      >
+        <table
+          width="100%"
+          style={{
+            maxWidth: "600px",
+            margin: "0 auto",
+            backgroundColor: "#ffffff",
+            border: "1px solid #e5e7eb",
+            borderRadius: "8px",
+            padding: "20px",
+          }}
+        >
+          <thead>
+            <tr style={{ backgroundColor: "#f3f4f6 " }}>
+              <td style={{ textAlign: "center", padding: "10px 0" }}>
+                <h1 style={{ fontSize: "24px", color: "#1f2937", margin: "0" }}>
+                  Thyltech
+                </h1>
+              </td>
+            </tr>
+          </thead>
+          <tbody style={{ padding: "20px", display: "block" }}>
+            <tr>
+              <td style={{ padding: "10px 0", color: "#1f2937" }}>
+                <h2 style={{ fontSize: "18px", margin: "0 0 10px 0" }}>
+                  Détails du message
+                </h2>
+                <p
+                  style={{
+                    margin: "5px 0",
+                    fontSize: "14px",
+                    color: "#6b7280",
+                  }}
+                >
+                  <strong>Date: </strong> {date ?? "Date inconnue"}
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td style={{ padding: "10px 0", color: "#1f2937" }}>
+                <h2 style={{ fontSize: "18px", margin: "0 0 10px 0" }}>
+                  Expéditeur
+                </h2>
+                <p
+                  style={{
+                    margin: "5px 0",
+                    fontSize: "14px",
+                    color: "#6b7280",
+                  }}
+                >
+                  <strong>Nom: </strong> {name ?? "Nom inconnu"}
+                </p>
+                <p
+                  style={{
+                    margin: "5px 0",
+                    fontSize: "14px",
+                    color: "#6b7280",
+                  }}
+                >
+                  <strong>Email: </strong> {email ?? "Email inconnu"}
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td style={{ padding: "10px 0", color: "#1f2937" }}>
+                <h2 style={{ fontSize: "18px", margin: "0 0 10px 0" }}>
+                  Message
+                </h2>
+                <p
+                  style={{
+                    margin: "5px 0",
+                    fontSize: "14px",
+                    color: "#6b7280",
+                  }}
+                >
+                  {message ?? "Message inconnu"}
+                </p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+
+
+      {/* Ne fonctionne pas !! */}
+
+      {/* <main className="bg-gray-100 min-h-screen py-16 flex items-center justify-center">
         <Card className="w-full max-w-lg shadow-xl bg-white rounded-lg">
           <CardHeader className="border-border border-b pb-4 pt-6 rounded-t-lg  bg-secondary">
             <div className="flex items-center justify-center flex-col gap-4">
@@ -114,7 +205,7 @@ export function EmailTemplate({
             </div>
           </CardContent>
         </Card>
-      </main>
+      </main> */}
     </>
-  
+  );
 }

@@ -27,8 +27,20 @@ export function Contact() {
 
     const formData = new FormData(event.currentTarget);
 
+    // On vérifie qu'ils ont tous une valeur
+    const name = formData.get("name") as string;
+    const email = formData.get("email") as string;
+    const message = formData.get("message") as string;    
+
+    if(name === "" || email === "" || message === "") {
+      toast({
+        description: "Tous les champs sont requis.",
+        variant: "destructive",
+      });
+      return;
+    }
+
     try {
-      // On appelle la Server Action en lui passant le formData
       await sendAction(formData);
 
       toast({
@@ -74,7 +86,7 @@ export function Contact() {
                 >
                   Nom
                 </label>
-                <Input id="name" placeholder="Votre nom" name="name" />
+                <Input id="name" placeholder="Votre nom" name="name" required />
               </div>
               <div>
                 <label
@@ -88,6 +100,7 @@ export function Contact() {
                   type="email"
                   placeholder="votre@email.com"
                   name="email"
+                  required
                 />
               </div>
               <div>
@@ -103,6 +116,7 @@ export function Contact() {
                   rows={5}
                   className="resize-none"
                   name="message"
+                  required
                 />
               </div>
               <Button
