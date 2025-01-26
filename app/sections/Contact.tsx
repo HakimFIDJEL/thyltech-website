@@ -10,27 +10,41 @@ import { FadeInComponent } from "../components/FadeInComponent";
 import { FullSeparator } from "../components/FullSeparator";
 import Link from "next/link";
 import { useState } from "react";
-import { useToast } from "@/hooks/use-toast"
+import { useToast } from "@/hooks/use-toast";
+
+import { sendAction } from "@/lib/mail"
+
+
 
 export function Contact() {
-  const [loading, setLoading] = useState(false);
-  const { toast } = useToast()
+  const { toast } = useToast();
+  const [pending, setPending] = useState(false);
 
-  function onSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
 
-    setLoading(true);
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    setPending(true);
 
-    // TODO : Implement the contact form
-    toast({
-      description: "Method not implemented",
-      variant: "destructive",
-      duration: 3000
-    });
+    const formData = new FormData(event.currentTarget);
 
-    setLoading(false);
+    try {
+      // On appelle la Server Action en lui passant le formData
+      await sendAction(formData);
 
+      toast({
+        description: "Message envoyé avec succès",
+      });
+    } catch (error) {
+      console.error(error);
+      toast({
+        description: "Une erreur est survenue lors de l'envoi du message",
+        variant: "destructive",
+      });
+    } finally {
+      setPending(false);
+    }
   }
+ 
 
   return (
     <section
@@ -49,7 +63,10 @@ export function Contact() {
               Notre formulaire de contact
             </p>
             <Separator />
-            <form className="space-y-4" onSubmit={onSubmit}>
+            <form
+              className="space-y-4"
+              onSubmit={handleSubmit}
+            >
               <div>
                 <label
                   htmlFor="name"
@@ -57,7 +74,7 @@ export function Contact() {
                 >
                   Nom
                 </label>
-                <Input id="name" placeholder="Votre nom" required />
+                <Input id="name" placeholder="Votre nom" name="name" />
               </div>
               <div>
                 <label
@@ -70,7 +87,7 @@ export function Contact() {
                   id="email"
                   type="email"
                   placeholder="votre@email.com"
-                  required
+                  name="email"
                 />
               </div>
               <div>
@@ -85,21 +102,24 @@ export function Contact() {
                   placeholder="Votre message"
                   rows={5}
                   className="resize-none"
-                  required
+                  name="message"
                 />
               </div>
               <Button
                 type="submit"
                 className="w-full flex items-center justify-center gap-2"
-                disabled={loading}
+                disabled={pending}
               >
-                <Send className={`h-4 w-4 ${loading ? "hidden" : "block"}`} />
+                {/* Affiché lorsque je soumets le formulaire sinon masqué */}
+                <Send className={`h-4 w-4 ${pending ? "hidden" : "block"}`} />
+
+                {/* Masqué lorsque je soumets le formulaire sinon affiché */}
                 <Loader2
                   className={`animate-spin h-4 w-4 ${
-                    loading ? "block" : "hidden"
+                    pending ? "block" : "hidden"
                   }`}
                 />
-                Envoyer
+                {pending ? "Envoi en cours..." : "Envoyer"}
               </Button>
             </form>
           </FadeInComponent>
