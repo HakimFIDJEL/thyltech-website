@@ -5,11 +5,6 @@ interface ContactProps {
   date: string;
 }
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
-import { Mail } from "lucide-react";
-import { Separator } from "@/components/ui/separator";
 
 export function EmailTemplate({ name, email, message, date }: ContactProps) {
   return (
