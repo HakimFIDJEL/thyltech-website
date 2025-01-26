@@ -27,10 +27,11 @@ export function Contact() {
 
     const formData = new FormData(event.currentTarget);
 
-    // On vérifie qu'ils ont tous une valeur
     const name = formData.get("name") as string;
     const email = formData.get("email") as string;
     const message = formData.get("message") as string;    
+
+    const form = event.currentTarget;
 
     if(name === "" || email === "" || message === "") {
       toast({
@@ -54,6 +55,7 @@ export function Contact() {
       });
     } finally {
       setPending(false);
+      form.reset();
     }
   }
  
