@@ -155,7 +155,7 @@ export function Contact() {
             <div>
               <ContactItem
                 name="Email"
-                href="mailto:contact@ig2i.fr"
+                href="mailto:hakimfidjel.pro@gmail.com"
                 icon={<Mail className="h-4 w-4" />}
               />
 

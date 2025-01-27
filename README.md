@@ -1,4 +1,4 @@
-# pfe-website
+# thyltech-website
 
 Ce projet est un site web réalisé dans le cadre de mon projet de fin d'études (PFE) et de mon groupe **Thyltech**. Il utilise **Next.js** pour le développement frontend et se base sur une structure moderne de composants React ainsi que la collection de composants **shadcn/ui**.
 
@@ -14,8 +14,8 @@ Avant de commencer, assure-toi d'avoir installé les outils suivants sur ta mach
 1. Clone le repository sur ton machine locale :
 
    ```
-   git clone https://github.com/HakimFIDJEL/pfe-website.git
-   cd pfe-website
+   git clone https://github.com/HakimFIDJEL/thyltech-website.git
+   cd thyltech-website
    ```
 
 2. Installe les dépendances du projet :

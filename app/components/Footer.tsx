@@ -10,9 +10,9 @@ export function Footer() {
       <div className="container px-4 md:px-6 py-12 border-l border-r border-border">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold">IG2I Centrale Lille</h3>
+            <h3 className="text-lg font-semibold">Thyltech</h3>
             <p className="text-sm text-muted-foreground">
-              Formation d'excellence en ingénierie informatique
+              Recherche de projet de fin d’études
             </p>
           </div>
           <div>
@@ -28,23 +28,39 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="#projet"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  Notre projet
+                  Projet
                 </Link>
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="#équipe"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  L'école
+                  Équipe
                 </Link>
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="#école"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  École
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="#planning"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  Planning
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="#contact"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
                   Contact
@@ -57,18 +73,18 @@ export function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <a
-                  href="mailto:contact@ig2i.fr"
+                  href="mailto:hakimfidjel.pro@gmail.com"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  contact@ig2i.fr
+                  Email
                 </a>
               </li>
               <li>
                 <a
-                  href="tel:+33320335455"
+                  href="https://www.linkedin.com/company/thyltech"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  +33 3 20 33 54 55
+                  LinkedIn
                 </a>
               </li>
               <li>
@@ -79,35 +95,10 @@ export function Footer() {
             </ul>
           </div>
           <div>
-            <h4 className="text-sm font-semibold mb-4">Suivez-nous</h4>
+            <h4 className="text-sm font-semibold mb-4">Notre plaquette</h4>
             <div className="flex space-x-4">
-              <a
-                href="#"
-                className="text-muted-foreground hover:text-foreground transition-colors"
-              >
-                <Facebook className="h-5 w-5" />
-                <span className="sr-only">Facebook</span>
-              </a>
-              <a
-                href="#"
-                className="text-muted-foreground hover:text-foreground transition-colors"
-              >
-                <Twitter className="h-5 w-5" />
-                <span className="sr-only">Twitter</span>
-              </a>
-              <a
-                href="#"
-                className="text-muted-foreground hover:text-foreground transition-colors"
-              >
-                <Instagram className="h-5 w-5" />
-                <span className="sr-only">Instagram</span>
-              </a>
-              <a
-                href="#"
-                className="text-muted-foreground hover:text-foreground transition-colors"
-              >
-                <Linkedin className="h-5 w-5" />
-                <span className="sr-only">LinkedIn</span>
+              <a href="/Thyltech_Plaquette.pdf" target="_blank" download className="text-muted-foreground not-italic text-sm hover:text-foreground transition-colors">
+                  Télécharger
               </a>
             </div>
           </div>
@@ -117,7 +108,7 @@ export function Footer() {
       <div className="container px-4 md:px-6 py-8 border-l border-r border-border">
         <div className="text-center">
           <p className="text-sm text-muted-foreground">
-            &copy; {currentYear} IG2I Centrale Lille. Tous droits réservés.
+            &copy; {currentYear} Thyltech. Tous droits réservés.
           </p>
         </div>
       </div>
