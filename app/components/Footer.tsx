@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
 import { FullSeparator } from "./FullSeparator";
 
 export function Footer() {
