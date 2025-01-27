@@ -178,7 +178,7 @@ export function Header() {
                     className="text-foreground  hidden sm:flex items-center"
                   >
                     <Link
-                      href="https://github.com/HakimFIDJEL/pfe-website"
+                      href="https://github.com/HakimFIDJEL/thyltech-website"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
