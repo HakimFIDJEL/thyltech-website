@@ -2,42 +2,42 @@
 
 import Image from "next/image";
 import { SectionTitle } from "../components/SectionTitle";
-import { Card, CardContent } from "@/components/ui/card";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
+// import { Card, CardContent } from "@/components/ui/card";
+// import {
+//   Carousel,
+//   CarouselContent,
+//   CarouselItem,
+//   CarouselNext,
+//   CarouselPrevious,
+// } from "@/components/ui/carousel";
 import { Separator } from "@/components/ui/separator";
 
 import { FadeInComponent } from "../components/FadeInComponent";
 import { FullSeparator } from "../components/FullSeparator";
 
-const testimonials = [
-  {
-    name: "Marie Dupont",
-    role: "Étudiante en 3ème année",
-    quote:
-      "IG2I m'a offert des opportunités incroyables pour développer mes compétences en informatique et en gestion de projet.",
-    image: "/placeholder.svg?height=100&width=100",
-  },
-  {
-    name: "Thomas Martin",
-    role: "Alumni, Promotion 2018",
-    quote:
-      "La formation polyvalente à IG2I m'a permis de rapidement m'adapter aux défis du monde professionnel en tant qu'ingénieur logiciel.",
-    image: "/placeholder.svg?height=100&width=100",
-  },
-  {
-    name: "Dr. Sophie Leroy",
-    role: "Professeure en Intelligence Artificielle",
-    quote:
-      "À IG2I, nous préparons nos étudiants à être à la pointe de l'innovation technologique, avec un focus sur l'IA et le machine learning.",
-    image: "/placeholder.svg?height=100&width=100",
-  },
-];
+// const testimonials = [
+//   {
+//     name: "Marie Dupont",
+//     role: "Étudiante en 3ème année",
+//     quote:
+//       "IG2I m'a offert des opportunités incroyables pour développer mes compétences en informatique et en gestion de projet.",
+//     image: "/placeholder.svg?height=100&width=100",
+//   },
+//   {
+//     name: "Thomas Martin",
+//     role: "Alumni, Promotion 2018",
+//     quote:
+//       "La formation polyvalente à IG2I m'a permis de rapidement m'adapter aux défis du monde professionnel en tant qu'ingénieur logiciel.",
+//     image: "/placeholder.svg?height=100&width=100",
+//   },
+//   {
+//     name: "Dr. Sophie Leroy",
+//     role: "Professeure en Intelligence Artificielle",
+//     quote:
+//       "À IG2I, nous préparons nos étudiants à être à la pointe de l'innovation technologique, avec un focus sur l'IA et le machine learning.",
+//     image: "/placeholder.svg?height=100&width=100",
+//   },
+// ];
 
 export function School() {
   return (
@@ -131,7 +131,7 @@ export function School() {
           </FadeInComponent>
         </div>
 
-        <div className="space-y-2">
+        {/* <div className="space-y-2">
           <FadeInComponent>
             <h3 className="text-xl font-semibold">Témoignages</h3>
           </FadeInComponent>
@@ -175,7 +175,7 @@ export function School() {
               </CardContent>
             </Card>
           </FadeInComponent>
-        </div>
+        </div> */}
       </div>
     </section>
   );
