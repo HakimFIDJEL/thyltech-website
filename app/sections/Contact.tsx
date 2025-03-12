@@ -1,63 +1,69 @@
 "use client";
 import { SectionTitle } from "../components/SectionTitle";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
+// import { Input } from "@/components/ui/input";
+// import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import { Download, Linkedin, Mail, Send, Loader2 } from "lucide-react";
+import { 
+  Download, 
+  Linkedin, 
+  Mail, 
+  // Send, 
+  // Loader2 
+} from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import { ContactItem } from "../components/ContactItem";
 import { FadeInComponent } from "../components/FadeInComponent";
 import { FullSeparator } from "../components/FullSeparator";
 import Link from "next/link";
-import { useState } from "react";
-import { useToast } from "@/hooks/use-toast";
+// import { useState } from "react";
+// import { useToast } from "@/hooks/use-toast";
 
-import { sendAction } from "@/lib/mail"
+// import { sendAction } from "@/lib/mail"
 
 
 
 export function Contact() {
-  const { toast } = useToast();
-  const [pending, setPending] = useState(false);
+  // const { toast } = useToast();
+  // const [pending, setPending] = useState(false);
 
 
-  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    setPending(true);
+  // async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+  //   event.preventDefault();
+  //   setPending(true);
 
-    const formData = new FormData(event.currentTarget);
+  //   const formData = new FormData(event.currentTarget);
 
-    const name = formData.get("name") as string;
-    const email = formData.get("email") as string;
-    const message = formData.get("message") as string;    
+  //   const name = formData.get("name") as string;
+  //   const email = formData.get("email") as string;
+  //   const message = formData.get("message") as string;    
 
-    const form = event.currentTarget;
+  //   const form = event.currentTarget;
 
-    if(name === "" || email === "" || message === "") {
-      toast({
-        description: "Tous les champs sont requis.",
-        variant: "destructive",
-      });
-      return;
-    }
+  //   if(name === "" || email === "" || message === "") {
+  //     toast({
+  //       description: "Tous les champs sont requis.",
+  //       variant: "destructive",
+  //     });
+  //     return;
+  //   }
 
-    try {
-      await sendAction(formData);
+  //   try {
+  //     await sendAction(formData);
 
-      toast({
-        description: "Message envoyé avec succès",
-      });
-    } catch (error) {
-      console.error(error);
-      toast({
-        description: "Une erreur est survenue lors de l'envoi du message",
-        variant: "destructive",
-      });
-    } finally {
-      setPending(false);
-      form.reset();
-    }
-  }
+  //     toast({
+  //       description: "Message envoyé avec succès",
+  //     });
+  //   } catch (error) {
+  //     console.error(error);
+  //     toast({
+  //       description: "Une erreur est survenue lors de l'envoi du message",
+  //       variant: "destructive",
+  //     });
+  //   } finally {
+  //     setPending(false);
+  //     form.reset();
+  //   }
+  // }
  
 
   return (
@@ -72,7 +78,7 @@ export function Contact() {
       <FullSeparator />
       <div className="container px-4 md:px-6 border-l border-r border-border  pt-8 pb-16">
         <div className="flex flex-col md:flex-row gap-8">
-          <FadeInComponent className="w-full md:w-1/2 space-y-6">
+          {/* <FadeInComponent className="w-full md:w-1/2 space-y-6">
             <p className="text-medium font-semibold text-center">
               Notre formulaire de contact
             </p>
@@ -126,10 +132,8 @@ export function Contact() {
                 className="w-full flex items-center justify-center gap-2"
                 disabled={pending}
               >
-                {/* Affiché lorsque je soumets le formulaire sinon masqué */}
                 <Send className={`h-4 w-4 ${pending ? "hidden" : "block"}`} />
 
-                {/* Masqué lorsque je soumets le formulaire sinon affiché */}
                 <Loader2
                   className={`animate-spin h-4 w-4 ${
                     pending ? "block" : "hidden"
@@ -140,17 +144,19 @@ export function Contact() {
             </form>
           </FadeInComponent>
 
-          <Separator orientation="vertical" className="h-100 hidden md:block" />
-          <Separator
+          <Separator orientation="vertical" className="h-100 hidden md:block" /> */}
+
+
+          {/* <Separator
             orientation="horizontal"
             className="w-full block md:hidden"
-          />
+          /> */}
 
-          <FadeInComponent className="w-full md:w-1/2 space-y-6">
-            <p className="text-medium font-semibold text-center">
+          <FadeInComponent className="w-full md:w-full space-y-6">
+            {/* <p className="text-medium font-semibold text-center">
               Nos coordonnées
             </p>
-            <Separator />
+            <Separator /> */}
 
             <div>
               <ContactItem
@@ -170,7 +176,7 @@ export function Contact() {
               <Separator />
 
               <Link href="/Thyltech_Plaquette.pdf" target="_blank" download>
-                <Button className="flex items-center justify-center w-full gap-2 mt-4">
+                <Button className="flex items-center justify-center w-full gap-2 mt-4" size="lg">
                   <Download className="h-4 w-4" />
                   Téléchargez notre plaquette
                 </Button>
