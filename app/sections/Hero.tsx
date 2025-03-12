@@ -45,16 +45,16 @@ export function Hero() {
       </div> */}
 
       <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 z-1 py-40 border-l border-r border-border flex justify-between items-center gap-8">
-        <div className="max-w-full sm:max-w-2xl">
+        <div className="max-w-full sm:max-w-3xl">
           <FadeInComponent>
             <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl">
-              Recherche de Projet de Fin d’Études
+              Recherche de Projet de Fin d’Études d’Ingénieur.
             </h1>
           </FadeInComponent>
           <FadeInComponent delay={200}>
             <p className="mt-6 text-lg leading-8 text-muted-foreground">
-              Dans le domaine du sport et de la santé. <br />
-              Pour des sujets autour des systèmes embarqués, de l’intelligence artificielle ou du développement logiciel.
+            Dans le domaine du sport et de la santé.  <br />
+            Pour des sujets autour des systèmes embarqués, de l’intelligence artificielle ou du développement logiciel.
             </p>
           </FadeInComponent>
           <FadeInComponent delay={400}>

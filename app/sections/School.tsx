@@ -46,7 +46,7 @@ export function School() {
       id="école"
     >
       <SectionTitle
-        title="IG2I Centrale Lille"
+        title="IG2I de Centrale Lille Institut"
         subtitle="Une formation d'excellence en ingénierie informatique"
       />
       <FullSeparator />
@@ -56,7 +56,7 @@ export function School() {
             <h3 className="text-xl font-semibold">Présentation de l'école</h3>
             <Separator />
             <p className="text-muted-foreground pt-3">
-              <strong>IG2I Centrale Lille</strong> est une école d'ingénieurs
+              <strong>IG2I de Centrale Lille Institut</strong> est une école d'ingénieurs
               spécialisée en <strong>informatique et industrie</strong>, offrant
               une <strong>formation de pointe sur 5 ans</strong>. Notre
               programme combine une solide base théorique avec une{" "}
@@ -130,6 +130,13 @@ export function School() {
             </div>
           </FadeInComponent>
         </div>
+        <FadeInComponent>
+          <strong>
+            Le projet sera financé par l’entreprise partenaire.
+          </strong>
+        </FadeInComponent>
+
+
 
         {/* <div className="space-y-2">
           <FadeInComponent>
