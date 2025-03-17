@@ -22,7 +22,7 @@ export function Project() {
           <p className="pt-3 text-md text-muted-foreground">
             Dans le cadre de notre{" "}
             <strong>Projet de Fin d'Études Ingénieur (PFE)</strong> à{" "}
-            <strong>l'IG2I de Centrale Lille Institut</strong>, qui représente
+            <strong>l'IG2I de Centrale Lille Institut</strong>, qui représente {" "}
             <strong>1260 heures de travail consacrées au projet</strong>, soit{" "}
             <strong>252 heures par membre dont 42 heures d’encadrement</strong>{" "}
             par des professeurs et experts, se déroulant de

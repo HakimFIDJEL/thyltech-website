@@ -2,6 +2,10 @@ import Link from "next/link";
 import { FullSeparator } from "./FullSeparator";
 
 export function Footer() {
+
+  // Accède aux variables d'environnement
+  const { THYLTECH_EMAIL } = process.env;
+
   const currentYear = new Date().getFullYear();
 
   return (
@@ -11,7 +15,7 @@ export function Footer() {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">Thyltech</h3>
             <p className="text-sm text-muted-foreground">
-              Recherche de projet de fin d’études
+              Recherche de projet de fin d’études d'ingénieur.
             </p>
           </div>
           <div>
@@ -72,7 +76,7 @@ export function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <a
-                  href="mailto:hakimfidjel.pro@gmail.com"
+                  href={`mailto:${THYLTECH_EMAIL}`}
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
                   Email
@@ -82,6 +86,7 @@ export function Footer() {
                 <a
                   href="https://www.linkedin.com/company/thyltech"
                   className="text-muted-foreground hover:text-foreground transition-colors"
+                  target="_blank"
                 >
                   LinkedIn
                 </a>

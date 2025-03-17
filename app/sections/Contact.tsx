@@ -26,6 +26,9 @@ export function Contact() {
   const { toast } = useToast();
   const [pending, setPending] = useState(false);
 
+  // Accède aux variables d'environnement
+  const { THYLTECH_EMAIL } = process.env;
+
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -161,7 +164,7 @@ export function Contact() {
             <div>
               <ContactItem
                 name="Email"
-                href="mailto:hakimfidjel.pro@gmail.com"
+                href={`mailto:${THYLTECH_EMAIL}`}
                 icon={<Mail className="h-4 w-4" />}
               />
 

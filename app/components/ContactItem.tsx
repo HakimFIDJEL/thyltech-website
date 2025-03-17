@@ -11,6 +11,7 @@ export function ContactItem({ name, href, icon }: ContactItemProps) {
     <a
       href={href}
       className="flex items-center justify-between py-4 group hover:bg-accent rounded-md transition-colors duration-200 px-4"
+      target="_blank"
     >
       <div className="flex items-center space-x-4">
         <div>
