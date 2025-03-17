@@ -47,7 +47,7 @@ export async function sendMail({
   // Envoi de l'e-mail  
   try {
     const sendResult = await transport.sendMail({
-      from: "no-reply@tyltech.com",
+      from: "no-reply@thyltech.com",
       to: THYLTECH_EMAIL,
       subject: "Thyltech - Nouveau message de contact",
       html: body,
