@@ -17,16 +17,6 @@ const teamMembers = [
     comp2: "Intégration de modèles sur systèmes embarqués",
   },
   {
-    name: "Léonore Legrand",
-    role: "Ingénieure Conception - Adjointe Qualité",
-    job: "Ingénieure d'études chez Vilogia",
-    image: "/images/leonore.png",
-    linkedin: "https://www.linkedin.com/in/léonore-legrand-64b312282/",
-    email: "leonore.legrand@ig2i.centralelille.fr",
-    comp1: "Accompagnement des équipes dans la digitalisation de leur activité.",
-    comp2: "Analyse et formalisation des besoins métier",
-  },
-  {
     name: "Hakim Fidjel",
     role: "Ingénieur Technique - Adjoint Projet",
     job: "Ingénieur Fullstack chez Réservoir Digital",
@@ -45,6 +35,16 @@ const teamMembers = [
     email: "younes.boughriet@ig2i.centralelille.fr",
     comp1: "Intégration de capteurs",
     comp2: "Programmation en langages bas niveau",
+  },
+  {
+    name: "Léonore Legrand",
+    role: "Ingénieure Conception - Adjointe Qualité",
+    job: "Ingénieure d'études chez Vilogia",
+    image: "/images/leonore.png",
+    linkedin: "https://www.linkedin.com/in/léonore-legrand-64b312282/",
+    email: "leonore.legrand@ig2i.centralelille.fr",
+    comp1: "Accompagnement des équipes dans la digitalisation de leur activité.",
+    comp2: "Analyse et formalisation des besoins métier",
   },
   {
     name: "Théo Colin",
